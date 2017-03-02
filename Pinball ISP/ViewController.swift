@@ -12,7 +12,7 @@ import GameplayKit
 
 class ViewController: NSViewController {
     override func viewDidLoad() {
-       super.viewDidLoad()
+        super.viewDidLoad()
         let GameScene = SKScene(size: CGSize(width: 800, height: 1050))
         
         
@@ -24,14 +24,15 @@ class ViewController: NSViewController {
         GameScene.scaleMode = .aspectFit
         skView.presentScene(GameScene)
     }
-
+    
     override func viewDidAppear() {
         super.viewDidAppear()
-}
-
+    }
+    
+    
     override var representedObject: Any? {
         didSet{
             
         }
-}
+    }
 }
