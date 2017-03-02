@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		787CD94A1E65FBC6008AA62F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787CD9491E65FBC6008AA62F /* AppDelegate.swift */; };
-		787CD94C1E65FBC6008AA62F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 787CD94B1E65FBC6008AA62F /* GameScene.sks */; };
-		787CD94E1E65FBC6008AA62F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 787CD94D1E65FBC6008AA62F /* Actions.sks */; };
 		787CD9501E65FBC6008AA62F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787CD94F1E65FBC6008AA62F /* GameScene.swift */; };
 		787CD9521E65FBC6008AA62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787CD9511E65FBC6008AA62F /* ViewController.swift */; };
 		787CD9541E65FBC6008AA62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787CD9531E65FBC6008AA62F /* Assets.xcassets */; };
@@ -19,8 +17,6 @@
 /* Begin PBXFileReference section */
 		787CD9461E65FBC6008AA62F /* Pinball ISP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinball ISP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787CD9491E65FBC6008AA62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		787CD94B1E65FBC6008AA62F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		787CD94D1E65FBC6008AA62F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		787CD94F1E65FBC6008AA62F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		787CD9511E65FBC6008AA62F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		787CD9531E65FBC6008AA62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,8 +57,6 @@
 			children = (
 				787CD95F1E66008E008AA62F /* Grade_11_Computer_Science_ISP_Proposal_-_Exemplar.docx */,
 				787CD9491E65FBC6008AA62F /* AppDelegate.swift */,
-				787CD94B1E65FBC6008AA62F /* GameScene.sks */,
-				787CD94D1E65FBC6008AA62F /* Actions.sks */,
 				787CD94F1E65FBC6008AA62F /* GameScene.swift */,
 				787CD9511E65FBC6008AA62F /* ViewController.swift */,
 				787CD9531E65FBC6008AA62F /* Assets.xcassets */,
@@ -131,9 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787CD94C1E65FBC6008AA62F /* GameScene.sks in Resources */,
 				787CD9541E65FBC6008AA62F /* Assets.xcassets in Resources */,
-				787CD94E1E65FBC6008AA62F /* Actions.sks in Resources */,
 				787CD9571E65FBC6008AA62F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
