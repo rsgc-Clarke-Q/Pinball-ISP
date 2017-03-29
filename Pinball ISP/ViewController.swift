@@ -13,7 +13,7 @@ import GameplayKit
 class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let GameScene = SKScene(size: CGSize(width: 800, height: 1050))
+        let scene = GameScene(size: CGSize(width: 800, height: 1050))
         
         
         let skView = SKView(frame: NSRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 800, height: 600)))
@@ -21,8 +21,8 @@ class ViewController: NSViewController {
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
         view.addSubview(skView)
-        GameScene.scaleMode = .aspectFit
-        skView.presentScene(GameScene)
+        scene.scaleMode = .aspectFit
+        skView.presentScene(scene)
     }
     
     override func viewDidAppear() {

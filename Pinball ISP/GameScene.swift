@@ -13,5 +13,12 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.black
+        
+        //sprite to represent the background
+        let background = SKSpriteNode(imageNamed: "pinballbackground")
+        
+        background.position = CGPoint(x: size.width/2, y: size.height/2) //set it in the middle of the screen
+        background.size = self.frame.size //set backgound to be the same size of the frame
+        addChild(background)
     }
 }
