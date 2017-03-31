@@ -292,6 +292,7 @@
 				787CD95D1E65FBC6008AA62F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

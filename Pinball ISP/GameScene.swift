@@ -20,5 +20,13 @@ class GameScene: SKScene {
         background.position = CGPoint(x: size.width/2, y: size.height/2) //set it in the middle of the screen
         background.size = self.frame.size //set backgound to be the same size of the frame
         addChild(background)
+        
+        let leftbumper = SKSpriteNode(imageNamed: "left bumper")
+        leftbumper.position = CGPoint(x: 180, y: 415)
+        addChild(leftbumper)
+        
+        let rightbumper = SKSpriteNode(imageNamed: "Right bottom bumper")
+        rightbumper.position = CGPoint(x: 450, y: 415)
+        addChild(rightbumper)
     }
 }
