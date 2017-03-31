@@ -25,23 +25,23 @@ class GameScene: SKScene {
         //adding green bumpers
         let leftbumper = SKSpriteNode(imageNamed: "left bumper")
         leftbumper.position = CGPoint(x: 180, y: 415)
-        background.zPosition = 1
+        leftbumper.zPosition = 1
         addChild(leftbumper)
         
         let rightbumper = SKSpriteNode(imageNamed: "Right bottom bumper")
         rightbumper.position = CGPoint(x: 450, y: 415)
-        background.zPosition = 1
+        rightbumper.zPosition = 1
         addChild(rightbumper)
         
         //adding the bumpers that hit the ball
         let leftpaddle = SKSpriteNode(imageNamed: "left trigger")
         leftpaddle.position = CGPoint(x: size.width/2 - 70, y: 315)
-        background.zPosition = 1
+        leftpaddle.zPosition = 1
         addChild(leftpaddle)
         
         let rightpaddle = SKSpriteNode(imageNamed: "right trigger")
         rightpaddle.position = CGPoint(x: size.width/2 - 10, y: 315)
-        background.zPosition = 1
+        rightpaddle.zPosition = 1
         addChild(rightpaddle)
     }
 }
