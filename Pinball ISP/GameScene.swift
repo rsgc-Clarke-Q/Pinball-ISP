@@ -13,6 +13,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.black
+        
         //adding all the spriites to the game
         //sprite to represent the background
         let background = SKSpriteNode(imageNamed: "pinballbackground")
@@ -101,7 +102,27 @@ class GameScene: SKScene {
         topBumper3.zPosition = 1
         addChild(topBumper3)
         
-        //side mini bumpers
+        //right side mini bumpers
+        let miniBumperR = SKSpriteNode(imageNamed: "right middle bumper")
+        miniBumperR.position = CGPoint(x: size.width/2 + 120, y: 570)
+        miniBumperR.zPosition = 1
+        addChild(miniBumperR)
+        
+        let miniBumperR2 = SKSpriteNode(imageNamed: "right middle bumper")
+        miniBumperR2.position = CGPoint(x: size.width/2 + 150, y: 530)
+        miniBumperR2.zPosition = 1
+        addChild(miniBumperR2)
+        
+      //left side mini bumpers
+        let miniBumperL = SKSpriteNode(imageNamed: "left middle bumper")
+        miniBumperL.position = CGPoint(x: size.width/2 - 211, y: 530)
+        miniBumperL.zPosition = 1
+        addChild(miniBumperL)
+        
+        let miniBumperL2 = SKSpriteNode(imageNamed: "left middle bumper")
+        miniBumperL2.position = CGPoint(x: size.width/2 - 181, y: 570)
+        miniBumperL2.zPosition = 1
+        addChild(miniBumperL2)
         
         //stars // not sure how i am supposed to do the for loop for the stars
         let stars = SKSpriteNode(imageNamed: "star")
