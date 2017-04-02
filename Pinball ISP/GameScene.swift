@@ -58,29 +58,20 @@ class GameScene: SKScene {
         
         //adding the middle bumpers
         let middleOne = SKSpriteNode(imageNamed: "middle bumper")
-        middleOne.position = CGPoint(x: size.width/2 - 38, y: 700)
+        middleOne.position = CGPoint(x: size.width/2 - 38, y: 800)
         middleOne.zPosition = 1
         addChild(middleOne)
         
-        let middleTwo = SKSpriteNode(imageNamed: "middle bumper")
-        middleTwo.position = CGPoint(x: size.width/2 - 200, y: 700)
+        let middleTwo = SKSpriteNode(imageNamed: "middle bumper 2")
+        middleTwo.position = CGPoint(x: size.width/2 - 180, y: 700)
         middleTwo.zPosition = 1
         addChild(middleTwo)
         
-        let middleThree = SKSpriteNode(imageNamed: "middle bumper")
-        middleThree.position = CGPoint(x: size.width/2 + 124, y: 700)
+        let middleThree = SKSpriteNode(imageNamed: "middle bumper 2")
+        middleThree.position = CGPoint(x: size.width/2 + 104, y: 700)
         middleThree.zPosition = 1
         addChild(middleThree)
         
-        let middleFour = SKSpriteNode(imageNamed: "middle bumper 2")
-        middleFour.position = CGPoint(x: size.width/2 + 45, y: 620)
-        middleFour.zPosition = 1
-        addChild(middleFour)
-        
-        let middleFive = SKSpriteNode(imageNamed: "middle bumper 2")
-        middleFive.position = CGPoint(x: size.width/2 - 121, y: 620)
-        middleFive.zPosition = 1
-        addChild(middleFive)
         
         //the long wall at the top
         let longbumper = SKSpriteNode(imageNamed: "long bumper")
@@ -110,8 +101,9 @@ class GameScene: SKScene {
         topBumper3.zPosition = 1
         addChild(topBumper3)
         
+        //side mini bumpers
         
-        //stars
+        //stars // not sure how i am supposed to do the for loop for the stars
         let stars = SKSpriteNode(imageNamed: "star")
         stars.position = CGPoint(x: size.width/2 - 31, y: 1000)
         stars.zPosition = 1
