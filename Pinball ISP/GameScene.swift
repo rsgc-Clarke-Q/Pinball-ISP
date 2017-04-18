@@ -63,15 +63,22 @@ class GameScene: SKScene {
         middleOne.zPosition = 1
         addChild(middleOne)
         
+        // Set physics body
+        middleOne.physicsBody = SKPhysicsBody(circleOfRadius: middleOne.size.width / 2)
+        
         let middleTwo = SKSpriteNode(imageNamed: "middle bumper 2")
         middleTwo.position = CGPoint(x: size.width/2 - 180, y: 700)
         middleTwo.zPosition = 1
         addChild(middleTwo)
+        // Set physics body
+        middleTwo.physicsBody = SKPhysicsBody(circleOfRadius: middleOne.size.width / 2)
         
         let middleThree = SKSpriteNode(imageNamed: "middle bumper 2")
         middleThree.position = CGPoint(x: size.width/2 + 104, y: 700)
         middleThree.zPosition = 1
         addChild(middleThree)
+        // Set physics body
+        middleThree.physicsBody = SKPhysicsBody(circleOfRadius: middleThree.size.width / 2)
         
         
         //the long wall at the top
@@ -85,6 +92,9 @@ class GameScene: SKScene {
         ball.position = CGPoint(x: size.width/2 + 271.5, y: 360)
         ball.zPosition = 1
         addChild(ball)
+        
+        // Set physics body for the ball based on its radius
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2)
         
         //top bumpers
         let topBumper = SKSpriteNode(imageNamed: "top bumper")
@@ -131,4 +141,32 @@ class GameScene: SKScene {
         addChild(stars)
         
     }
+    
+//    //this is a function that runs everytime a frame is updated
+//    override func update(_ currentTime: TimeInterval) {
+//        //check for collision between ball and the obstacles
+//        checkCollisions()
+//    }
+//    
+//    //this function checks for collisions between ball and the obstacles
+//    func checkCollisions(){
+//        
+//        //Create an array that will contain all the obstacles colliding with the ball
+//        var hitObstacles : [SKSpriteNode] = []
+//        
+//        //find the obstacles colliding with the ball
+//        enumerateChildNodes(withName: "obstacle", using: {
+//            node, _ in
+//            
+//            //get a refference to the current node that was found with the name obstacle
+//            let obstacle = node as! SKSpriteNode
+//            
+//            //check to see if the ball is hitting obstacle
+//            if obstacle.frame.intersects(self.ball){
+//                //this obstacle intersects with the ball
+//                print("hit")
+//            }
+//        })
+//        
+//    }
 }
