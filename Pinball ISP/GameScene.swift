@@ -9,6 +9,14 @@
 import SpriteKit
 import GameplayKit
 
+struct PhysicsCategory {
+    static let None     :   UInt32 = 0
+    static let background    :   UInt32 = 0b0001  // 1
+    static let middle     :   UInt32 = 0b0010  // 2
+    static let border   :   UInt32 = 0b0100  // 4
+}
+
+
 class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
@@ -35,21 +43,15 @@ class GameScene: SKScene {
         border.position = CGPoint(x: size.width/2, y: size.height/2)
         border.size = self.frame.size
         border.zPosition = -2
+        border.physicsBody = SKPhysicsBody(texture: border.texture!, size: border.size)
         addChild(border)
         
-//        //making physics body for the border
-//        let borderPath = CGMutablePath()
-//        borderPath.move(to: CGPoint(x: -border.size.width/2,
-//                                 y: -border.size.height/2))
-//        borderPath.addLine(to: CGPoint(x: border.size.width/2,
-//                                    y: -border.size.height/2))
-//        borderPath.addLine(to: CGPoint(x: 0, y: border.size.height/2))
-//        borderPath.addLine(to: CGPoint(x: -border.size.width/2,
-//                                    y: -border.size.height/2))
-//        border.physicsBody = SKPhysicsBody(polygonFrom: borderPath)
-//        
-//        // Make the shape not be affected by gravity in this world
-//        border.physicsBody?.affectedByGravity = false
+        //making physics body for the border
+  
+
+        
+        // Make the shape not be affected by gravity in this world
+        border.physicsBody?.affectedByGravity = false
 
         
         
@@ -59,6 +61,20 @@ class GameScene: SKScene {
         leftbumper.position = CGPoint(x: 180, y: 415)
         leftbumper.zPosition = 1
         addChild(leftbumper)
+        
+                //making physics body for the bumpers
+                let leftbumperPath = CGMutablePath()
+                leftbumperPath.move(to: CGPoint(x: -leftbumper.size.width/2,
+                                         y: -leftbumper.size.height/2))
+                leftbumperPath.addLine(to: CGPoint(x: leftbumper.size.width/2,
+                                            y: -leftbumper.size.height/2))
+                leftbumperPath.addLine(to: CGPoint(x: 0, y: leftbumper.size.height/2))
+                leftbumperPath.addLine(to: CGPoint(x: -leftbumper.size.width/2,
+                                            y: -leftbumper.size.height/2))
+                leftbumper.physicsBody = SKPhysicsBody(polygonFrom: leftbumperPath)
+        
+                // Make the shape not be affected by gravity in this world
+                leftbumper.physicsBody?.affectedByGravity = false
         
         // Make the shape not be affected by gravity in this world
         leftbumper.physicsBody?.affectedByGravity = false
@@ -70,6 +86,8 @@ class GameScene: SKScene {
         
         // Make the shape not be affected by gravity in this world
         rightbumper.physicsBody?.affectedByGravity = false
+        
+        
         
         //adding the triggers that hit the ball
         let leftpaddle = SKSpriteNode(imageNamed: "left trigger")
@@ -110,6 +128,8 @@ class GameScene: SKScene {
         // Make the shape not be affected by gravity in this world
         bar.physicsBody?.affectedByGravity = false
         
+        //making it hit the ball when up arrow key is pressed
+       
         
         
         //adding the middle bumpers
@@ -169,6 +189,9 @@ class GameScene: SKScene {
         
         // Set physics body for the ball based on its radius
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2)
+        
+        //makking the ball be affectedby the physics simulation
+        ball.physicsBody?.isDynamic = true
         
         
         
@@ -251,6 +274,9 @@ class GameScene: SKScene {
         addChild(stars)
         
     }
+    
+    
+
     
 //    //this is a function that runs everytime a frame is updated
 //    override func update(_ currentTime: TimeInterval) {
