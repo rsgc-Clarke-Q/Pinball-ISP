@@ -13,7 +13,7 @@ struct PhysicsCategory {
     static let None     :   UInt32 = 0
     static let background    :   UInt32 = 0b0001  // 1
     static let middle     :   UInt32 = 0b0010  // 2
-    static let border   :   UInt32 = 0b0100  // 4
+    static let leftbumper   :   UInt32 = 0b0100  // 4
 }
 
 
@@ -39,19 +39,19 @@ class GameScene: SKScene {
         
         
         //adding a border
-        let border = SKSpriteNode(imageNamed: "border")
-        border.position = CGPoint(x: size.width/2, y: size.height/2)
-        border.size = self.frame.size
-        border.zPosition = -2
-        border.physicsBody = SKPhysicsBody(texture: border.texture!, size: border.size)
-        addChild(border)
+//        let border = SKSpriteNode(imageNamed: "border")
+//        border.position = CGPoint(x: size.width/2, y: size.height/2)
+//        border.size = self.frame.size
+//        border.zPosition = -2
+//        border.physicsBody = SKPhysicsBody(texture: border.texture!, size: border.size)
+//        addChild(border)
         
         //making physics body for the border
   
 
         
         // Make the shape not be affected by gravity in this world
-        border.physicsBody?.affectedByGravity = false
+//        border.physicsBody?.affectedByGravity = false
 
         
         
@@ -62,27 +62,22 @@ class GameScene: SKScene {
         leftbumper.zPosition = 1
         addChild(leftbumper)
         
-                //making physics body for the bumpers
-                let leftbumperPath = CGMutablePath()
-                leftbumperPath.move(to: CGPoint(x: -leftbumper.size.width/2,
-                                         y: -leftbumper.size.height/2))
-                leftbumperPath.addLine(to: CGPoint(x: leftbumper.size.width/2,
-                                            y: -leftbumper.size.height/2))
-                leftbumperPath.addLine(to: CGPoint(x: 0, y: leftbumper.size.height/2))
-                leftbumperPath.addLine(to: CGPoint(x: -leftbumper.size.width/2,
-                                            y: -leftbumper.size.height/2))
-                leftbumper.physicsBody = SKPhysicsBody(polygonFrom: leftbumperPath)
+                //making physics body for the object
+        leftbumper.physicsBody = SKPhysicsBody(texture: leftbumper.texture!, size: leftbumper.size)
+
         
                 // Make the shape not be affected by gravity in this world
                 leftbumper.physicsBody?.affectedByGravity = false
         
-        // Make the shape not be affected by gravity in this world
-        leftbumper.physicsBody?.affectedByGravity = false
+    
         
         let rightbumper = SKSpriteNode(imageNamed: "Right bottom bumper")
         rightbumper.position = CGPoint(x: 450, y: 415)
         rightbumper.zPosition = 1
         addChild(rightbumper)
+        
+        //making physics body for the object
+        rightbumper.physicsBody = SKPhysicsBody(texture: rightbumper.texture!, size: rightbumper.size)
         
         // Make the shape not be affected by gravity in this world
         rightbumper.physicsBody?.affectedByGravity = false
@@ -95,13 +90,20 @@ class GameScene: SKScene {
         leftpaddle.zPosition = 1
         addChild(leftpaddle)
         
+        //making physics body for the object
+        leftpaddle.physicsBody = SKPhysicsBody(texture: leftpaddle.texture!, size: leftpaddle.size)
+        
         // Make the shape not be affected by gravity in this world
         leftpaddle.physicsBody?.affectedByGravity = false
+        
         
         let rightpaddle = SKSpriteNode(imageNamed: "right trigger")
         rightpaddle.position = CGPoint(x: size.width/2 + 20, y: 320)
         rightpaddle.zPosition = 1
         addChild(rightpaddle)
+        
+        //making physics body for the object
+        rightpaddle.physicsBody = SKPhysicsBody(texture: rightpaddle.texture!, size: rightpaddle.size)
         
         // Make the shape not be affected by gravity in this world
         rightpaddle.physicsBody?.affectedByGravity = false
@@ -115,15 +117,8 @@ class GameScene: SKScene {
         addChild(bar)
         
         //making physics body for the bar
-        let barPath = CGMutablePath()
-        barPath.move(to: CGPoint(x: -bar.size.width/2,
-                                      y: -bar.size.height/2))
-        barPath.addLine(to: CGPoint(x: bar.size.width/2,
-                                         y: -bar.size.height/2))
-        barPath.addLine(to: CGPoint(x: 0, y: bar.size.height/2))
-        barPath.addLine(to: CGPoint(x: -bar.size.width/2,
-                                         y: -bar.size.height/2))
-        bar.physicsBody = SKPhysicsBody(polygonFrom: barPath)
+   
+        bar.physicsBody = SKPhysicsBody(texture: bar.texture!, size: bar.size)
         
         // Make the shape not be affected by gravity in this world
         bar.physicsBody?.affectedByGravity = false
@@ -176,6 +171,9 @@ class GameScene: SKScene {
         longbumper.zPosition = 1
         addChild(longbumper)
         
+        //making physics body for the object
+        longbumper.physicsBody = SKPhysicsBody(texture: longbumper.texture!, size: longbumper.size)
+        
         // Make the shape not be affected by gravity in this world
         longbumper.physicsBody?.affectedByGravity = false
         
@@ -190,9 +188,7 @@ class GameScene: SKScene {
         // Set physics body for the ball based on its radius
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2)
         
-        //makking the ball be affectedby the physics simulation
-        ball.physicsBody?.isDynamic = true
-        
+    
         
         
         //top bumpers
@@ -200,6 +196,9 @@ class GameScene: SKScene {
         topBumper.position = CGPoint(x: size.width/2 - 38, y: 990)
         topBumper.zPosition = 1
         addChild(topBumper)
+        
+        //making physics body for the object
+        topBumper.physicsBody = SKPhysicsBody(texture: topBumper.texture!, size: topBumper.size)
         
         // Make the shape not be affected by gravity in this world
         topBumper.physicsBody?.affectedByGravity = false
@@ -210,6 +209,10 @@ class GameScene: SKScene {
         topBumper2.position = CGPoint(x: size.width/2 - 110, y: 990)
         topBumper2.zPosition = 1
         addChild(topBumper2)
+        
+        //making physics body for the object
+        topBumper2.physicsBody = SKPhysicsBody(texture: topBumper2.texture!, size: topBumper2.size)
+        
         // Make the shape not be affected by gravity in this world
         topBumper2.physicsBody?.affectedByGravity = false
         
@@ -219,6 +222,9 @@ class GameScene: SKScene {
         topBumper3.position = CGPoint(x: size.width/2 + 34, y: 990)
         topBumper3.zPosition = 1
         addChild(topBumper3)
+        
+        //making physics body for the object
+        topBumper3.physicsBody = SKPhysicsBody(texture: topBumper3.texture!, size: topBumper3.size)
         
         // Make the shape not be affected by gravity in this world
         topBumper3.physicsBody?.affectedByGravity = false
@@ -231,15 +237,21 @@ class GameScene: SKScene {
         miniBumperR.zPosition = 1
         addChild(miniBumperR)
         
+        //making physics body for the object
+        miniBumperR.physicsBody = SKPhysicsBody(texture: miniBumperR.texture!, size: miniBumperR.size)
+        
         // Make the shape not be affected by gravity in this world
         miniBumperR.physicsBody?.affectedByGravity = false
         
         
-        
+        //second minibumper
         let miniBumperR2 = SKSpriteNode(imageNamed: "right middle bumper")
         miniBumperR2.position = CGPoint(x: size.width/2 + 150, y: 530)
         miniBumperR2.zPosition = 1
         addChild(miniBumperR2)
+        
+        //making physics body for the object
+        miniBumperR2.physicsBody = SKPhysicsBody(texture: miniBumperR2.texture!, size: miniBumperR2.size)
         
         // Make the shape not be affected by gravity in this world
         miniBumperR2.physicsBody?.affectedByGravity = false
@@ -252,15 +264,21 @@ class GameScene: SKScene {
         miniBumperL.zPosition = 1
         addChild(miniBumperL)
         
+        //making physics body for the object
+        miniBumperL.physicsBody = SKPhysicsBody(texture: miniBumperL.texture!, size: miniBumperL.size)
+    
         // Make the shape not be affected by gravity in this world
         miniBumperL.physicsBody?.affectedByGravity = false
         
         
-        
+        //second left minibumper
         let miniBumperL2 = SKSpriteNode(imageNamed: "left middle bumper")
         miniBumperL2.position = CGPoint(x: size.width/2 - 181, y: 570)
         miniBumperL2.zPosition = 1
         addChild(miniBumperL2)
+        
+        //making physics body for the object
+        miniBumperL2.physicsBody = SKPhysicsBody(texture: miniBumperL2.texture!, size: miniBumperL2.size)
         
         // Make the shape not be affected by gravity in this world
         miniBumperL2.physicsBody?.affectedByGravity = false
