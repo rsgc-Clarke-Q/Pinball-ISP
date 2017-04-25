@@ -39,19 +39,18 @@ class GameScene: SKScene {
         
         
         //adding a border
-//        let border = SKSpriteNode(imageNamed: "border")
-//        border.position = CGPoint(x: size.width/2, y: size.height/2)
-//        border.size = self.frame.size
-//        border.zPosition = -2
-//        border.physicsBody = SKPhysicsBody(texture: border.texture!, size: border.size)
-//        addChild(border)
+        let border = SKSpriteNode(imageNamed: "inner border")
+        border.position = CGPoint(x: size.width/2, y: size.height/2)
+        border.size = self.frame.size
+        border.zPosition = -2
         
-        //making physics body for the border
-  
+         //making physics body for the border
+        border.physicsBody = SKPhysicsBody(texture: border.texture!, size: border.size)
+        addChild(border)
 
         
         // Make the shape not be affected by gravity in this world
-//        border.physicsBody?.affectedByGravity = false
+        border.physicsBody?.affectedByGravity = false
 
         
         
