@@ -12,10 +12,10 @@
 		787CD9521E65FBC6008AA62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787CD9511E65FBC6008AA62F /* ViewController.swift */; };
 		787CD9541E65FBC6008AA62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787CD9531E65FBC6008AA62F /* Assets.xcassets */; };
 		787CD9571E65FBC6008AA62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787CD9551E65FBC6008AA62F /* Main.storyboard */; };
-		789227871EAECDFB00AAFDA1 /* Independent_Study_Project_-_Checkpoint_2.docx in Resources */ = {isa = PBXBuildFile; fileRef = 789227861EAECDFB00AAFDA1 /* Independent_Study_Project_-_Checkpoint_2.docx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7857D2E61EB1120300F06610 /* Independent_Study_Project_-_Checkpoint_2.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Independent_Study_Project_-_Checkpoint_2.docx"; sourceTree = "<group>"; };
 		787CD9461E65FBC6008AA62F /* Pinball ISP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinball ISP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787CD9491E65FBC6008AA62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787CD94F1E65FBC6008AA62F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -24,7 +24,6 @@
 		787CD9561E65FBC6008AA62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		787CD9581E65FBC6008AA62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787CD95F1E66008E008AA62F /* Grade_11_Computer_Science_ISP_Proposal_-_Exemplar.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grade_11_Computer_Science_ISP_Proposal_-_Exemplar.docx"; sourceTree = SOURCE_ROOT; };
-		789227861EAECDFB00AAFDA1 /* Independent_Study_Project_-_Checkpoint_2.docx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Independent_Study_Project_-_Checkpoint_2.docx"; path = "../../../../../Downloads/Independent_Study_Project_-_Checkpoint_2.docx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +56,7 @@
 		787CD9481E65FBC6008AA62F /* Pinball ISP */ = {
 			isa = PBXGroup;
 			children = (
-				789227861EAECDFB00AAFDA1 /* Independent_Study_Project_-_Checkpoint_2.docx */,
+				7857D2E61EB1120300F06610 /* Independent_Study_Project_-_Checkpoint_2.docx */,
 				787CD95F1E66008E008AA62F /* Grade_11_Computer_Science_ISP_Proposal_-_Exemplar.docx */,
 				787CD9491E65FBC6008AA62F /* AppDelegate.swift */,
 				787CD94F1E65FBC6008AA62F /* GameScene.swift */,
@@ -130,7 +129,6 @@
 			files = (
 				787CD9541E65FBC6008AA62F /* Assets.xcassets in Resources */,
 				787CD9571E65FBC6008AA62F /* Main.storyboard in Resources */,
-				789227871EAECDFB00AAFDA1 /* Independent_Study_Project_-_Checkpoint_2.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
