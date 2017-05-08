@@ -33,6 +33,9 @@ class GameScene: SKScene {
     let scoreLable = SKLabelNode(fontNamed: "Cambria")
     var score = 0 //this tracks the current score
     
+    let previousScore = SKLabelNode(fontNamed: "Cambria")
+    var prevScore = 0
+    
     //this function runs once
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.black
@@ -169,12 +172,12 @@ class GameScene: SKScene {
         
         
         //here to make sure the ball doesnt go outside of the border phys body
-        saver.position = CGPoint(x: 315, y: 230)
+        saver.position = CGPoint(x: 670, y: 380)
         saver.zPosition = -5 //it wont show
         addChild(saver)
         
         // Making physics body for the bar
-        saver.physicsBody = SKPhysicsBody(texture: ending.texture!, size: ending.size)
+        saver.physicsBody = SKPhysicsBody(texture: saver.texture!, size: saver.size)
         
         // Make the shape not be affected by gravity in this world
         saver.physicsBody?.affectedByGravity = false
@@ -332,14 +335,14 @@ class GameScene: SKScene {
 //        
 //                // Make the shape not be affected by gravity in this world
 //                miniBumperL2.physicsBody?.affectedByGravity = false
-        
-        
-        
-                //stars
-                let stars = SKSpriteNode(imageNamed: "star")
-                stars.position = CGPoint(x: size.width/2 - 31, y: 1000)
-                stars.zPosition = 1
-                addChild(stars)
+//        
+//        
+//        
+//                //stars
+//                let stars = SKSpriteNode(imageNamed: "star")
+//                stars.position = CGPoint(x: size.width/2 - 31, y: 1000)
+//                stars.zPosition = 1
+//                addChild(stars)
         
         
         
@@ -351,6 +354,14 @@ class GameScene: SKScene {
         scoreLable.position = CGPoint(x: size.width/2 - 38, y: 475)//place in the middle circle
         addChild(scoreLable)
         
+        //adding string in the bottom
+        previousScore.text = String("Previous Score: \(prevScore)")
+        previousScore.fontColor = SKColor.black
+        previousScore.fontSize = 55
+        previousScore.zPosition = 3 //3 so that the ball goes over it but nothingelse
+        previousScore.position = CGPoint(x: size.width/2 - 30, y: 28)//place in the bottom
+        addChild(previousScore)
+    
     }
     
     
@@ -471,10 +482,16 @@ class GameScene: SKScene {
         //reset the balls position
         ball.position = CGPoint(x: 630, y: 380)
         
+        prevScore = score
+        
         score = 0
         
         //update the score label
         scoreLable.text = String(score)
+        
+        //update the prevscore label
+        previousScore.text = String("Previous Score: \(prevScore)")
+
     }
 
 }
