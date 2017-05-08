@@ -338,11 +338,7 @@ class GameScene: SKScene {
 //        
 //        
 //        
-//                //stars
-//                let stars = SKSpriteNode(imageNamed: "star")
-//                stars.position = CGPoint(x: size.width/2 - 31, y: 1000)
-//                stars.zPosition = 1
-//                addChild(stars)
+
         
         
         
